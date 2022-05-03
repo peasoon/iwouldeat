@@ -1,0 +1,295 @@
+mixin rt-item(title, desc)
+	//item
+	.ready-text__item.rt-item
+		.rt-item__title= title 
+		.rt-item__desc= desc 
+	//end of item
+
+mixin innerTabSlide(id)
+	//slide
+	.swiper-slide.gctcetc-slider__slide.gctcetcs-slide
+		.gctcetcs-slide__image
+			img(src=`https://placeimg.com/200/150/any?id=${Math.floor(Math.random()*100)}`, alt="")
+	//end of slide
+
+mixin innerTabContent()
+	//content
+	.gctce-tabs__content.gctcet-content
+		.gctcet-content__slider.gctcetc-slider 
+			.swiper.gctcetc-slider__slider 
+				.swiper-wrapper 
+					+innerTabSlide(1)
+					+innerTabSlide(2)
+					+innerTabSlide(3)
+	//end of content
+
+mixin mainTabContent(title)
+	//content
+	.gc-tabs__content.gct-content 
+		.gct-content__title= title
+		.gct-content__count.gctc-count 
+			.gctc-count__item.selected 3 блюда
+			.gctc-count__item 4 блюда
+			.gctc-count__item 5 блюд
+			.gctc-count__item 6 блюд
+		.gct-content__add.gctc-add 
+			.gctc-add__item Добавить десерт (100 р/день) 
+			.gctc-add__item Добавить напиток (50 р/день)
+		.gct-content__example.gctc-example 
+			.gctc-example__title Пример меню на день
+			.gctc-example__tabs.gctce-tabs 
+				.tabs.gctce-tabs__tabs
+					p.tabs-day.dayContainer
+						span.menuDay Понедельник
+					.tabs-headings.innerTabsHeadings
+						.heading.selected Понедельник
+						.heading Вторник
+						.heading Среда
+						.heading Четверг
+						.heading Пятница
+						.heading Суббота
+						.heading Воскресенье
+					.tabs-content
+						.content.show
+							+innerTabContent()
+						.content 
+							+innerTabContent()
+						.content 
+							+innerTabContent()
+						.content 
+							+innerTabContent()
+						.content 
+							+innerTabContent()
+						.content 
+							+innerTabContent()
+						.content
+							+innerTabContent()
+			.gctc-example__bju.gctce-bju 
+				.gctce-bju__title КБЖУ
+				.gctce-bju__cal 2000
+				.gctce-bju__b 99
+				.gctce-bju__j 88
+				.gctce-bju__u 187
+	//end of content
+
+mixin gcp-item(title, val1, val2, num)
+	.gc-price__item.gcp-item
+		.gcp-item__title= title
+		label
+			input(type="radio" name=`gcp-item__checkbox-${num}` value="5" checked)
+			span.gcp-item__check.gcp-item__check-min= val1 
+		label
+			input(type="radio" name=`gcp-item__checkbox-${num}` value="20")
+			span.gcp-item__check.gcp-item__check-max= val2
+
+
+section.ready
+	.container
+		.ready__text.ready-text
+			.section-title#firstScreenTitle(style="will-change: transform, opacity;") Готовая еда на неделю с доставкой
+			+rt-item("День еды от 500₽","Выгодней чем готовить самому")
+			+rt-item("Вкусное разнообразное меню","Каждый день новые блюда")
+			+rt-item("Сбалансировано, питательно, полезно","В каждой линейке посчитаны КБЖУ для ваших целей")
+			button.primary-btn Вбырать меню
+		.ready__image 
+			img(src="./img/ready/bg.jpg" alt="Фоновая картинка")
+		.ready__arrows 
+			<svg><use xlink:href="./img/ready/arrows.svg#Capa_1"></use></svg>
+
+section.goal 
+	.container 
+		.section-title(data-aos="fade-right") Выбери свою цель
+		.goal__items.goal-items
+			.goal-items__el Брать еду на работу
+			.goal-items__el Похудеть за месяц
+			.goal-items__el Сэкономить время
+			.goal-items__el Ощущать лёгкость
+			.goal-items__el Удовлетворять изысканный вкус
+			.goal-items__el Work&Life balance
+			.goal-items__el Питаться сбалансированно
+		.goal__calc.goal-calc 
+			.goal-calc__tabs.gc-tabs 
+				.tabs.gc-tabs__tabs
+					.tabs-headings
+						.heading.selected Домашняя
+						.heading Лайт
+						.heading Авангард
+					.tabs-content
+						.content.show
+							+mainTabContent("Знакомый вксус для повселневной жизни")
+						.content 
+							+mainTabContent("Баланс привычной еды для красивой фигуры")
+						.content 
+							+mainTabContent("Палитра блюд различных стран мира")
+			form.goal-calc__price.gc-price
+				.gc-price__try 
+					|Попробуйте за <span>1440р</span>
+				+gcp-item("Когда будете есть","Каждый день","По будням",1)
+				+gcp-item("Количество дней","5(760 р/день)","20(700 р/день)",2)
+				.gc-price__promo 
+					input(type="text" placeholder="Введите промокод")
+				.gc-price__ration-container
+					.gc-price__ration.gcp-ration
+						.gcp-ration__name Рацион "Домашний":
+						.gcp-ration__count 5 блюд,
+						.gcp-ration__days 5 дней
+						.gcp-ration__delete &#9747;
+				.gc-price__add#addRation Добавить рацион
+				.gc-price__total 
+					| Итого:
+					span 3800 р.
+				.gc-price__payment
+					label
+						input(type="radio" name="gc-price__payment-radio" checked)
+						span Оплата курьеру
+					label
+						input(type="radio" name="gc-price__payment-radio")
+						span Оплата онлайн
+				.gc-price__phone 
+					input(type="text" placeholder="Введите номер" autocomplete="off")#phoneForMask
+				.gc-price__order-wrapper
+					button(disabled).gc-price__order#orderBtn Заказать
+					.gc-price__policy 
+						|Оформляя заказ вы соглашаетесь с 
+						a(href="#") политикой конфеденциальности
+
+mixin bonus-item(href, title, text)
+	//item
+	.bonuses-items__bonus.bi-bonus
+		.bi-bonus__icon
+			<svg><use xlink:href= "#{href}"></use></svg>
+		.bi-bonus__title= title
+		.bi-bonus__text= text
+	//end of item
+
+section.bonuses 
+	.container
+		.section-title(data-aos="fade-right") Наши бонусы
+		.bonuses__items.bonuses-items
+			+bonus-item("./img/bonuses/items/icon01.svg#friends","Приведи друга", "...И получайте до 500р. скидка на заказ") 
+			+bonus-item("./img/bonuses/items/icon02.svg#snowflake","Заморозка подписки", "Поставь доставку на паузу, когда угодно, на сколько нужно") 
+			+bonus-item("./img/bonuses/items/icon03.svg#free","Бесплатная доставка", "При заказе на любую сумму") 
+
+section.decision
+	.container.decision-container
+		.section-title(data-aos="fade-right") Не можешь определиться?
+		.decision__order Попробуй <span>10</span> наших блюд всего за <span>1440 ₽</span>
+		.primary-btn.decision__btn Заказать
+
+mixin csi-el(href, text)
+	//item
+	.cs-items__el.csi-el
+		.csi-el__icon
+			<svg><use xlink:href= "#{href}"></use></svg>
+		.csi-el__text= text
+	//end of item
+
+section.care
+	.container.care-container
+		.section-title(data-aos="fade-right") Забота о планете — долг каждого!
+		.care__img.care__img-01 
+			img(src="./img/care/01.webp", alt="")
+		.care__img.care__img-02 
+			img(src="./img/care/02.webp", alt="")
+		.care__img.care__img-03 
+			img(src="./img/care/03.webp", alt="")
+		.care__text 
+			| Сегодня, выбрасывая в мусорное ведро нашу упаковку, вы решаете, каким воздухом будут дышать ваши дети. Совсем отказаться от пластика мы не можем, как бы этого ни хотели: еда должна быть загерметизирована, чтобы вы получили ее свежей. 
+		.care__solution.care-solution 
+			.care-solution__title Но решение найдено.
+			.care-solution__items.cs-items
+				+csi-el("./img/care/items/icon01.svg#num1","Получите пакет для сбора мусора вместе с набором блюд")
+				+csi-el("./img/care/items/icon02.svg#num2","Вымойте пластиковую посуду и сложите в пакет")
+				+csi-el("./img/care/items/icon03.svg#num3","Передайте пакет нашему курьеру при следующей доставке")
+				+csi-el("./img/care/items/icon04.svg#num4","Курьер отправит всю упаковку на переработку")
+		.care__responsibility Мы берем ответственность за сохранность планеты. Вы с нами?
+
+mixin hiwi-el(href, title, text)
+	//item
+	.hiw-items__el.hiwi-el
+		.hiwi-el__icon
+			<svg><use xlink:href="#{href}"></use></svg>
+		.hiwi-el__title= title
+		.hiwi-el__text= text
+	//end of item
+
+section.how-it-works 
+	.container 
+		.section-title(data-aos="fade-right") Как это работает
+		.how-it-works__items.hiw-items
+			+hiwi-el("./img/how-it-works/items/icon01.svg#num01","Выбираете меню","На выбор Домашнее, Легкое или Авангард")
+			.hiw-items__line
+			+hiwi-el("./img/how-it-works/items/icon02.svg#num02","Выбираете рацион","На выбор 4 варианта: 5, 7, 20, 28 дней")
+			.hiw-items__line
+			+hiwi-el("./img/how-it-works/items/icon03.svg#num03","Согласовываете доставку","Доставляем с утра и вечером в удобный 2-х часовой интервал")
+			.hiw-items__line
+			+hiwi-el("./img/how-it-works/items/icon04.svg#num04","Забываете о готовке!","С нашими блюдами вам больше не придется готовить еду")
+
+section.about 
+	.container.about-container
+		.about__info.about-info 
+			.section-title.about-info__title(data-aos="fade-right") О компании 
+			.about-info__desc Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium quis assumenda dolores ab veniam voluptatum voluptatibus, placeat animi ex accusantium?
+			.about-info__achievements Мы работаем с 2019 года и за это время доставили уже более <span>1 000 000</span> блюд.
+		.about__pic.about-pic
+			.about-pic__image
+				img(src="./img/about/founder.jpg", alt="Основатель компании")
+			.about-pic__desc Все начиналось с простой идеи удобной доставки домашней еды, которая быстро превратилась в полноценный бизнес.
+			.about-pic__name Основатель компании Lorem Ipsun
+
+
+section.reviews
+	.container
+		#vk_wrapper 
+			#vk_groups
+
+mixin dt-time(title, time)
+	//item
+	.delivery-time__item.dt-item 
+		.dt-item__title= title
+		.dt-item__time= time
+	//end of item
+
+section.delivery 
+	.container.delivery-container
+		.section-title(data-aos="fade-right") Бесплатная доставка 
+		.delivery__map#map
+		.delivery__time.delivery-time 
+			+dt-time("Утренняя доставка","7:00 - 12:00")
+			+dt-time("Вечерняя доставка","18:00 - 23:00")
+
+mixin accordeon-item(title, text)
+	//item
+	li.accordeon
+		button(aria-expanded="false").accordeon__control
+			span.accordeon__title= title
+			span.accordeon__icon
+		div(aria-hidden="true").accordeon__content!= text
+	//end of item
+
+section.faq 
+	.container 
+		.section-title(data-aos="fade-right") Отвечаем на частые вопросы
+		ul.accordeon__list.single.faq__accordeon
+			+accordeon-item("Как работает подписка на рацион?","Все просто и очень удобно) Вы выбираете удобный для вас вариант рациона на 5, 7, 20 или 28 дней. И каждые 2-3 дня наш курьер будет привозить вам свежую еду в удобное время. Вам больше не нужно думать о готовке, походах в магазин и мытье посуды, гораздо лучше тратить время на более полезные вещи.")
+			+accordeon-item("Можно ли заказать не весь рацион, а что-то определенное?","Мы доставляем рационы на весь день, поэтому нет возможности заказать отдельно завтрак, обед или ужин.")
+			+accordeon-item("Можно ли менять меню по составу и калорийности?","По предварительному согласованию можем заменять отдельные блюда, если вы не едите определенные продукты или у вас пищевая аллергия. Также мы можем изменить отдельные высококалорийные блюда на фрукты или овощи, чтобы вы смогли снизить число калорий. Свяжитесь с нами любым удобным способом :)")
+			+accordeon-item("Есть ли у вас специальное меню для диабетиков или вегетарианское?","Наши рационы рассчитаны на массовую аудиторию. На людей, которые хотят отказаться от необходимости ходить по магазинам, готовить и мыть посуду, но при этом питаться вкусно, разнообразно и по-домашнему. В ближайшее время мы сможем предложить вам специальное меню, следите за новостями в социальных сетях и на сайте.")
+			+accordeon-item("У вас указано время доставки с 7:00 до 12:00 и с 18:00 до 23:00. Мне придется 5 часов сидеть дома?","Нет, вы можете выбрать 2-х часовой интервал. Сообщите об этом оператору в день доставки, когда он позвонит вам для согласования времени.")
+			+accordeon-item("Если я не могу принять доставку, можно ли заморозить или перенести ее на другой день?","Да, конечно! Предупредите нас об этом за день и мы остановим доставку для вас или перенесем на другую дату. Вы получите в полном объеме все плаченные дни.")
+			+accordeon-item("Есть ли у вас дневная доставка?","В данный момент у нас нет дневной доставки и мы над этим работаем, сейчас мы предлагаем утреннюю и вечернюю доставку.")
+			+accordeon-item("Вы доставляете в пригород?","Как правило, мы доставляем только в пределах СПб. Также мы доставляем в Мурино и Кудрово. Пожалуйста, уточните у оператора возможность доставки заказа по вашему адресу. Доставки в ЛО у нас нет.")
+
+section.additional-questions
+	.container 
+		.section-title(data-aos="fade-right") Остались вопросы?
+		.additional-questions__content.aq-content
+			.aq-content__text Звоните <span>407-30-47, напишите</span> нам или закажите
+			.primary-btn.aq-content__btn#callbackModalOpen Обратный звонок
+
+
+				
+
+
+
+

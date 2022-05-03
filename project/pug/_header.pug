@@ -1,0 +1,25 @@
+mixin link(href, text)
+	li.header-nav__item 
+		a(href=href).header-nav__link= text
+
+.container
+	nav.header__nav.header-nav
+		.header-nav__logo
+			img(src="./img/header/logo.png", alt="Логотип")
+		ul.header-nav__list
+			+link("#","Меню")
+			+link("#","Как это работает")
+			+link("#","О нас")
+			+link("#","Отзывы")
+			+link("#","Отзывы")
+			+link("#","Доставка")
+			+link("#","Частые вопросы")
+			+link("#","Контакты")
+		.header-nav__btns
+			button.primary-btn Перезвоните мне
+			button.primary-btn.primary-btn--white
+				a(href="tel:89991234567") +7(812)123-45-67
+		.burger.header-nav__burger
+			span
+			span
+			span

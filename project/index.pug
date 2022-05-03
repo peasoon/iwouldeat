@@ -1,0 +1,45 @@
+extends ./pug/_layout.pug
+
+block variables
+	- var title = 'Main page'
+	- var ata={id:'pipka'}
+
+block scripts
+	script(type="text/javascript" src="https://vk.com/js/api/openapi.js?168")
+
+
+block content
+	.overlay-modal 
+		.callback
+			.callback__close#closeCallbackModal
+				<svg><use xlink:href="./img/modals/close.svg#close"></use></svg>
+			.callback__title Заказать обратный звонок
+			.callback__phone 
+				p Ваш телефон
+				input#overlayPhone
+			.primary-btn.callback__btn Жду звонка
+			.callback__policy Нажимая "Отправить", вы соглашаетесь с <a href="#">политикой конфиденциальности.</a>
+	.wrapper
+		.arrow-up#arrowUp
+			<svg><use xlink:href="./img/global/arrow-up.svg#arrow-up"></use></svg>
+		.messager 
+			.messager__services.messager-services#messagerServices
+				.messager-services__item#msi1
+					<svg><use xlink:href="./img/global/messager/phone.svg#phone"></use></svg>
+				.messager-services__item 
+					<svg><use xlink:href="./img/global/messager/mail.svg#mail"></use></svg>
+				.messager-services__item 
+					<svg><use xlink:href="./img/global/messager/vk.svg#vk"></use></svg>
+				.messager-services__item 
+					<svg><use xlink:href="./img/global/messager/whatsapp.svg#whatsapp"></use></svg>
+			.messager__icon.messager-icon#messagerBtn
+				.messager-icon__open
+					<svg><use xlink:href="./img/global/messager/message.svg#message"></use></svg>
+				.messager-icon__close
+					<svg><use xlink:href="./img/global/messager/close.svg#close"></use></svg>
+		header.header
+			include ./pug/_header.pug
+		main.home 
+			include ./pug/_home.pug
+		footer.footer
+			include ./pug/_footer.pug

@@ -1,0 +1,2029 @@
+<!DOCTYPE html>
+<html lang="en" id="pipka">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <script
+      type="text/javascript"
+      src="https://vk.com/js/api/openapi.js?168"
+    ></script>
+    <title>Main page</title>
+  </head>
+  <body>
+    <div class="overlay-modal">
+      <div class="callback">
+        <div class="callback__close" id="closeCallbackModal">
+          <svg><use xlink:href="./img/modals/close.svg#close"></use></svg>
+        </div>
+        <div class="callback__title">Заказать обратный звонок</div>
+        <div class="callback__phone">
+          <p>Ваш телефон</p>
+          <input id="overlayPhone" />
+        </div>
+        <div class="primary-btn callback__btn">Жду звонка</div>
+        <div class="callback__policy">
+          Нажимая "Отправить", вы соглашаетесь с
+          <a href="#">политикой конфиденциальности.</a>
+        </div>
+      </div>
+    </div>
+    <div class="wrapper">
+      <div class="arrow-up" id="arrowUp">
+        <svg><use xlink:href="./img/global/arrow-up.svg#arrow-up"></use></svg>
+      </div>
+      <div class="messager">
+        <div class="messager__services messager-services" id="messagerServices">
+          <div class="messager-services__item" id="msi1">
+            <svg>
+              <use xlink:href="./img/global/messager/phone.svg#phone"></use>
+            </svg>
+          </div>
+          <div class="messager-services__item">
+            <svg>
+              <use xlink:href="./img/global/messager/mail.svg#mail"></use>
+            </svg>
+          </div>
+          <div class="messager-services__item">
+            <svg><use xlink:href="./img/global/messager/vk.svg#vk"></use></svg>
+          </div>
+          <div class="messager-services__item">
+            <svg>
+              <use
+                xlink:href="./img/global/messager/whatsapp.svg#whatsapp"
+              ></use>
+            </svg>
+          </div>
+        </div>
+        <div class="messager__icon messager-icon" id="messagerBtn">
+          <div class="messager-icon__open">
+            <svg>
+              <use xlink:href="./img/global/messager/message.svg#message"></use>
+            </svg>
+          </div>
+          <div class="messager-icon__close">
+            <svg>
+              <use xlink:href="./img/global/messager/close.svg#close"></use>
+            </svg>
+          </div>
+        </div>
+      </div>
+      <header class="header">
+        <div class="container">
+          <nav class="header__nav header-nav">
+            <div class="header-nav__logo">
+              <img src="./img/header/logo.png" alt="Логотип" />
+            </div>
+            <ul class="header-nav__list">
+              <li class="header-nav__item">
+                <a class="header-nav__link" href="#">Меню</a>
+              </li>
+              <li class="header-nav__item">
+                <a class="header-nav__link" href="#">Как это работает</a>
+              </li>
+              <li class="header-nav__item">
+                <a class="header-nav__link" href="#">О нас</a>
+              </li>
+              <li class="header-nav__item">
+                <a class="header-nav__link" href="#">Отзывы</a>
+              </li>
+              <li class="header-nav__item">
+                <a class="header-nav__link" href="#">Отзывы</a>
+              </li>
+              <li class="header-nav__item">
+                <a class="header-nav__link" href="#">Доставка</a>
+              </li>
+              <li class="header-nav__item">
+                <a class="header-nav__link" href="#">Частые вопросы</a>
+              </li>
+              <li class="header-nav__item">
+                <a class="header-nav__link" href="#">Контакты</a>
+              </li>
+            </ul>
+            <div class="header-nav__btns">
+              <button class="primary-btn">Перезвоните мне</button>
+              <button class="primary-btn primary-btn--white">
+                <a href="tel:89991234567">+7(812)123-45-67</a>
+              </button>
+            </div>
+            <div class="burger header-nav__burger">
+              <span></span><span></span><span></span>
+            </div>
+          </nav>
+        </div>
+      </header>
+      <main class="home">
+        <section class="ready">
+          <div class="container">
+            <div class="ready__text ready-text">
+              <div
+                class="section-title"
+                id="firstScreenTitle"
+                style="will-change: transform, opacity"
+              >
+                Готовая еда на неделю с доставкой
+              </div>
+              <!--item-->
+              <div class="ready-text__item rt-item">
+                <div class="rt-item__title">День еды от 500₽</div>
+                <div class="rt-item__desc">Выгодней чем готовить самому</div>
+              </div>
+              <!--end of item-->
+              <!--item-->
+              <div class="ready-text__item rt-item">
+                <div class="rt-item__title">Вкусное разнообразное меню</div>
+                <div class="rt-item__desc">Каждый день новые блюда</div>
+              </div>
+              <!--end of item-->
+              <!--item-->
+              <div class="ready-text__item rt-item">
+                <div class="rt-item__title">
+                  Сбалансировано, питательно, полезно
+                </div>
+                <div class="rt-item__desc">
+                  В каждой линейке посчитаны КБЖУ для ваших целей
+                </div>
+              </div>
+              <!--end of item-->
+              <button class="primary-btn">Вбырать меню</button>
+            </div>
+            <div class="ready__image">
+              <img src="./img/ready/bg.jpg" alt="Фоновая картинка" />
+            </div>
+            <div class="ready__arrows">
+              <svg><use xlink:href="./img/ready/arrows.svg#Capa_1"></use></svg>
+            </div>
+          </div>
+        </section>
+        <section class="goal">
+          <div class="container">
+            <div class="section-title" data-aos="fade-right">
+              Выбери свою цель
+            </div>
+            <div class="goal__items goal-items">
+              <div class="goal-items__el">Брать еду на работу</div>
+              <div class="goal-items__el">Похудеть за месяц</div>
+              <div class="goal-items__el">Сэкономить время</div>
+              <div class="goal-items__el">Ощущать лёгкость</div>
+              <div class="goal-items__el">Удовлетворять изысканный вкус</div>
+              <div class="goal-items__el">Work&Life balance</div>
+              <div class="goal-items__el">Питаться сбалансированно</div>
+            </div>
+            <div class="goal__calc goal-calc">
+              <div class="goal-calc__tabs gc-tabs">
+                <div class="tabs gc-tabs__tabs">
+                  <div class="tabs-headings">
+                    <div class="heading selected">Домашняя</div>
+                    <div class="heading">Лайт</div>
+                    <div class="heading">Авангард</div>
+                  </div>
+                  <div class="tabs-content">
+                    <div class="content show">
+                      <!--content-->
+                      <div class="gc-tabs__content gct-content">
+                        <div class="gct-content__title">
+                          Знакомый вксус для повселневной жизни
+                        </div>
+                        <div class="gct-content__count gctc-count">
+                          <div class="gctc-count__item selected">3 блюда</div>
+                          <div class="gctc-count__item">4 блюда</div>
+                          <div class="gctc-count__item">5 блюд</div>
+                          <div class="gctc-count__item">6 блюд</div>
+                        </div>
+                        <div class="gct-content__add gctc-add">
+                          <div class="gctc-add__item">
+                            Добавить десерт (100 р/день)
+                          </div>
+                          <div class="gctc-add__item">
+                            Добавить напиток (50 р/день)
+                          </div>
+                        </div>
+                        <div class="gct-content__example gctc-example">
+                          <div class="gctc-example__title">
+                            Пример меню на день
+                          </div>
+                          <div class="gctc-example__tabs gctce-tabs">
+                            <div class="tabs gctce-tabs__tabs">
+                              <p class="tabs-day dayContainer">
+                                <span class="menuDay">Понедельник</span>
+                              </p>
+                              <div class="tabs-headings innerTabsHeadings">
+                                <div class="heading selected">Понедельник</div>
+                                <div class="heading">Вторник</div>
+                                <div class="heading">Среда</div>
+                                <div class="heading">Четверг</div>
+                                <div class="heading">Пятница</div>
+                                <div class="heading">Суббота</div>
+                                <div class="heading">Воскресенье</div>
+                              </div>
+                              <div class="tabs-content">
+                                <div class="content show">
+                                  <!--content-->
+                                  <div
+                                    class="gctce-tabs__content gctcet-content"
+                                  >
+                                    <div
+                                      class="gctcet-content__slider gctcetc-slider"
+                                    >
+                                      <div
+                                        class="swiper gctcetc-slider__slider"
+                                      >
+                                        <div class="swiper-wrapper">
+                                          <!--slide-->
+                                          <div
+                                            class="swiper-slide gctcetc-slider__slide gctcetcs-slide"
+                                          >
+                                            <div class="gctcetcs-slide__image">
+                                              <img
+                                                src="https://placeimg.com/200/150/any?id=69"
+                                                alt=""
+                                              />
+                                            </div>
+                                          </div>
+                                          <!--end of slide-->
+                                          <!--slide-->
+                                          <div
+                                            class="swiper-slide gctcetc-slider__slide gctcetcs-slide"
+                                          >
+                                            <div class="gctcetcs-slide__image">
+                                              <img
+                                                src="https://placeimg.com/200/150/any?id=90"
+                                                alt=""
+                                              />
+                                            </div>
+                                          </div>
+                                          <!--end of slide-->
+                                          <!--slide-->
+                                          <div
+                                            class="swiper-slide gctcetc-slider__slide gctcetcs-slide"
+                                          >
+                                            <div class="gctcetcs-slide__image">
+                                              <img
+                                                src="https://placeimg.com/200/150/any?id=77"
+                                                alt=""
+                                              />
+                                            </div>
+                                          </div>
+                                          <!--end of slide-->
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <!--end of content-->
+                                </div>
+                                <div class="content">
+                                  <!--content-->
+                                  <div
+                                    class="gctce-tabs__content gctcet-content"
+                                  >
+                                    <div
+                                      class="gctcet-content__slider gctcetc-slider"
+                                    >
+                                      <div
+                                        class="swiper gctcetc-slider__slider"
+                                      >
+                                        <div class="swiper-wrapper">
+                                          <!--slide-->
+                                          <div
+                                            class="swiper-slide gctcetc-slider__slide gctcetcs-slide"
+                                          >
+                                            <div class="gctcetcs-slide__image">
+                                              <img
+                                                src="https://placeimg.com/200/150/any?id=60"
+                                                alt=""
+                                              />
+                                            </div>
+                                          </div>
+                                          <!--end of slide-->
+                                          <!--slide-->
+                                          <div
+                                            class="swiper-slide gctcetc-slider__slide gctcetcs-slide"
+                                          >
+                                            <div class="gctcetcs-slide__image">
+                                              <img
+                                                src="https://placeimg.com/200/150/any?id=81"
+                                                alt=""
+                                              />
+                                            </div>
+                                          </div>
+                                          <!--end of slide-->
+                                          <!--slide-->
+                                          <div
+                                            class="swiper-slide gctcetc-slider__slide gctcetcs-slide"
+                                          >
+                                            <div class="gctcetcs-slide__image">
+                                              <img
+                                                src="https://placeimg.com/200/150/any?id=82"
+                                                alt=""
+                                              />
+                                            </div>
+                                          </div>
+                                          <!--end of slide-->
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <!--end of content-->
+                                </div>
+                                <div class="content">
+                                  <!--content-->
+                                  <div
+                                    class="gctce-tabs__content gctcet-content"
+                                  >
+                                    <div
+                                      class="gctcet-content__slider gctcetc-slider"
+                                    >
+                                      <div
+                                        class="swiper gctcetc-slider__slider"
+                                      >
+                                        <div class="swiper-wrapper">
+                                          <!--slide-->
+                                          <div
+                                            class="swiper-slide gctcetc-slider__slide gctcetcs-slide"
+                                          >
+                                            <div class="gctcetcs-slide__image">
+                                              <img
+                                                src="https://placeimg.com/200/150/any?id=31"
+                                                alt=""
+                                              />
+                                            </div>
+                                          </div>
+                                          <!--end of slide-->
+                                          <!--slide-->
+                                          <div
+                                            class="swiper-slide gctcetc-slider__slide gctcetcs-slide"
+                                          >
+                                            <div class="gctcetcs-slide__image">
+                                              <img
+                                                src="https://placeimg.com/200/150/any?id=94"
+                                                alt=""
+                                              />
+                                            </div>
+                                          </div>
+                                          <!--end of slide-->
+                                          <!--slide-->
+                                          <div
+                                            class="swiper-slide gctcetc-slider__slide gctcetcs-slide"
+                                          >
+                                            <div class="gctcetcs-slide__image">
+                                              <img
+                                                src="https://placeimg.com/200/150/any?id=97"
+                                                alt=""
+                                              />
+                                            </div>
+                                          </div>
+                                          <!--end of slide-->
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <!--end of content-->
+                                </div>
+                                <div class="content">
+                                  <!--content-->
+                                  <div
+                                    class="gctce-tabs__content gctcet-content"
+                                  >
+                                    <div
+                                      class="gctcet-content__slider gctcetc-slider"
+                                    >
+                                      <div
+                                        class="swiper gctcetc-slider__slider"
+                                      >
+                                        <div class="swiper-wrapper">
+                                          <!--slide-->
+                                          <div
+                                            class="swiper-slide gctcetc-slider__slide gctcetcs-slide"
+                                          >
+                                            <div class="gctcetcs-slide__image">
+                                              <img
+                                                src="https://placeimg.com/200/150/any?id=91"
+                                                alt=""
+                                              />
+                                            </div>
+                                          </div>
+                                          <!--end of slide-->
+                                          <!--slide-->
+                                          <div
+                                            class="swiper-slide gctcetc-slider__slide gctcetcs-slide"
+                                          >
+                                            <div class="gctcetcs-slide__image">
+                                              <img
+                                                src="https://placeimg.com/200/150/any?id=56"
+                                                alt=""
+                                              />
+                                            </div>
+                                          </div>
+                                          <!--end of slide-->
+                                          <!--slide-->
+                                          <div
+                                            class="swiper-slide gctcetc-slider__slide gctcetcs-slide"
+                                          >
+                                            <div class="gctcetcs-slide__image">
+                                              <img
+                                                src="https://placeimg.com/200/150/any?id=38"
+                                                alt=""
+                                              />
+                                            </div>
+                                          </div>
+                                          <!--end of slide-->
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <!--end of content-->
+                                </div>
+                                <div class="content">
+                                  <!--content-->
+                                  <div
+                                    class="gctce-tabs__content gctcet-content"
+                                  >
+                                    <div
+                                      class="gctcet-content__slider gctcetc-slider"
+                                    >
+                                      <div
+                                        class="swiper gctcetc-slider__slider"
+                                      >
+                                        <div class="swiper-wrapper">
+                                          <!--slide-->
+                                          <div
+                                            class="swiper-slide gctcetc-slider__slide gctcetcs-slide"
+                                          >
+                                            <div class="gctcetcs-slide__image">
+                                              <img
+                                                src="https://placeimg.com/200/150/any?id=28"
+                                                alt=""
+                                              />
+                                            </div>
+                                          </div>
+                                          <!--end of slide-->
+                                          <!--slide-->
+                                          <div
+                                            class="swiper-slide gctcetc-slider__slide gctcetcs-slide"
+                                          >
+                                            <div class="gctcetcs-slide__image">
+                                              <img
+                                                src="https://placeimg.com/200/150/any?id=26"
+                                                alt=""
+                                              />
+                                            </div>
+                                          </div>
+                                          <!--end of slide-->
+                                          <!--slide-->
+                                          <div
+                                            class="swiper-slide gctcetc-slider__slide gctcetcs-slide"
+                                          >
+                                            <div class="gctcetcs-slide__image">
+                                              <img
+                                                src="https://placeimg.com/200/150/any?id=1"
+                                                alt=""
+                                              />
+                                            </div>
+                                          </div>
+                                          <!--end of slide-->
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <!--end of content-->
+                                </div>
+                                <div class="content">
+                                  <!--content-->
+                                  <div
+                                    class="gctce-tabs__content gctcet-content"
+                                  >
+                                    <div
+                                      class="gctcet-content__slider gctcetc-slider"
+                                    >
+                                      <div
+                                        class="swiper gctcetc-slider__slider"
+                                      >
+                                        <div class="swiper-wrapper">
+                                          <!--slide-->
+                                          <div
+                                            class="swiper-slide gctcetc-slider__slide gctcetcs-slide"
+                                          >
+                                            <div class="gctcetcs-slide__image">
+                                              <img
+                                                src="https://placeimg.com/200/150/any?id=22"
+                                                alt=""
+                                              />
+                                            </div>
+                                          </div>
+                                          <!--end of slide-->
+                                          <!--slide-->
+                                          <div
+                                            class="swiper-slide gctcetc-slider__slide gctcetcs-slide"
+                                          >
+                                            <div class="gctcetcs-slide__image">
+                                              <img
+                                                src="https://placeimg.com/200/150/any?id=10"
+                                                alt=""
+                                              />
+                                            </div>
+                                          </div>
+                                          <!--end of slide-->
+                                          <!--slide-->
+                                          <div
+                                            class="swiper-slide gctcetc-slider__slide gctcetcs-slide"
+                                          >
+                                            <div class="gctcetcs-slide__image">
+                                              <img
+                                                src="https://placeimg.com/200/150/any?id=33"
+                                                alt=""
+                                              />
+                                            </div>
+                                          </div>
+                                          <!--end of slide-->
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <!--end of content-->
+                                </div>
+                                <div class="content">
+                                  <!--content-->
+                                  <div
+                                    class="gctce-tabs__content gctcet-content"
+                                  >
+                                    <div
+                                      class="gctcet-content__slider gctcetc-slider"
+                                    >
+                                      <div
+                                        class="swiper gctcetc-slider__slider"
+                                      >
+                                        <div class="swiper-wrapper">
+                                          <!--slide-->
+                                          <div
+                                            class="swiper-slide gctcetc-slider__slide gctcetcs-slide"
+                                          >
+                                            <div class="gctcetcs-slide__image">
+                                              <img
+                                                src="https://placeimg.com/200/150/any?id=92"
+                                                alt=""
+                                              />
+                                            </div>
+                                          </div>
+                                          <!--end of slide-->
+                                          <!--slide-->
+                                          <div
+                                            class="swiper-slide gctcetc-slider__slide gctcetcs-slide"
+                                          >
+                                            <div class="gctcetcs-slide__image">
+                                              <img
+                                                src="https://placeimg.com/200/150/any?id=80"
+                                                alt=""
+                                              />
+                                            </div>
+                                          </div>
+                                          <!--end of slide-->
+                                          <!--slide-->
+                                          <div
+                                            class="swiper-slide gctcetc-slider__slide gctcetcs-slide"
+                                          >
+                                            <div class="gctcetcs-slide__image">
+                                              <img
+                                                src="https://placeimg.com/200/150/any?id=40"
+                                                alt=""
+                                              />
+                                            </div>
+                                          </div>
+                                          <!--end of slide-->
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <!--end of content-->
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="gctc-example__bju gctce-bju">
+                            <div class="gctce-bju__title">КБЖУ</div>
+                            <div class="gctce-bju__cal">2000</div>
+                            <div class="gctce-bju__b">99</div>
+                            <div class="gctce-bju__j">88</div>
+                            <div class="gctce-bju__u">187</div>
+                          </div>
+                        </div>
+                      </div>
+                      <!--end of content-->
+                    </div>
+                    <div class="content">
+                      <!--content-->
+                      <div class="gc-tabs__content gct-content">
+                        <div class="gct-content__title">
+                          Баланс привычной еды для красивой фигуры
+                        </div>
+                        <div class="gct-content__count gctc-count">
+                          <div class="gctc-count__item selected">3 блюда</div>
+                          <div class="gctc-count__item">4 блюда</div>
+                          <div class="gctc-count__item">5 блюд</div>
+                          <div class="gctc-count__item">6 блюд</div>
+                        </div>
+                        <div class="gct-content__add gctc-add">
+                          <div class="gctc-add__item">
+                            Добавить десерт (100 р/день)
+                          </div>
+                          <div class="gctc-add__item">
+                            Добавить напиток (50 р/день)
+                          </div>
+                        </div>
+                        <div class="gct-content__example gctc-example">
+                          <div class="gctc-example__title">
+                            Пример меню на день
+                          </div>
+                          <div class="gctc-example__tabs gctce-tabs">
+                            <div class="tabs gctce-tabs__tabs">
+                              <p class="tabs-day dayContainer">
+                                <span class="menuDay">Понедельник</span>
+                              </p>
+                              <div class="tabs-headings innerTabsHeadings">
+                                <div class="heading selected">Понедельник</div>
+                                <div class="heading">Вторник</div>
+                                <div class="heading">Среда</div>
+                                <div class="heading">Четверг</div>
+                                <div class="heading">Пятница</div>
+                                <div class="heading">Суббота</div>
+                                <div class="heading">Воскресенье</div>
+                              </div>
+                              <div class="tabs-content">
+                                <div class="content show">
+                                  <!--content-->
+                                  <div
+                                    class="gctce-tabs__content gctcet-content"
+                                  >
+                                    <div
+                                      class="gctcet-content__slider gctcetc-slider"
+                                    >
+                                      <div
+                                        class="swiper gctcetc-slider__slider"
+                                      >
+                                        <div class="swiper-wrapper">
+                                          <!--slide-->
+                                          <div
+                                            class="swiper-slide gctcetc-slider__slide gctcetcs-slide"
+                                          >
+                                            <div class="gctcetcs-slide__image">
+                                              <img
+                                                src="https://placeimg.com/200/150/any?id=37"
+                                                alt=""
+                                              />
+                                            </div>
+                                          </div>
+                                          <!--end of slide-->
+                                          <!--slide-->
+                                          <div
+                                            class="swiper-slide gctcetc-slider__slide gctcetcs-slide"
+                                          >
+                                            <div class="gctcetcs-slide__image">
+                                              <img
+                                                src="https://placeimg.com/200/150/any?id=0"
+                                                alt=""
+                                              />
+                                            </div>
+                                          </div>
+                                          <!--end of slide-->
+                                          <!--slide-->
+                                          <div
+                                            class="swiper-slide gctcetc-slider__slide gctcetcs-slide"
+                                          >
+                                            <div class="gctcetcs-slide__image">
+                                              <img
+                                                src="https://placeimg.com/200/150/any?id=11"
+                                                alt=""
+                                              />
+                                            </div>
+                                          </div>
+                                          <!--end of slide-->
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <!--end of content-->
+                                </div>
+                                <div class="content">
+                                  <!--content-->
+                                  <div
+                                    class="gctce-tabs__content gctcet-content"
+                                  >
+                                    <div
+                                      class="gctcet-content__slider gctcetc-slider"
+                                    >
+                                      <div
+                                        class="swiper gctcetc-slider__slider"
+                                      >
+                                        <div class="swiper-wrapper">
+                                          <!--slide-->
+                                          <div
+                                            class="swiper-slide gctcetc-slider__slide gctcetcs-slide"
+                                          >
+                                            <div class="gctcetcs-slide__image">
+                                              <img
+                                                src="https://placeimg.com/200/150/any?id=3"
+                                                alt=""
+                                              />
+                                            </div>
+                                          </div>
+                                          <!--end of slide-->
+                                          <!--slide-->
+                                          <div
+                                            class="swiper-slide gctcetc-slider__slide gctcetcs-slide"
+                                          >
+                                            <div class="gctcetcs-slide__image">
+                                              <img
+                                                src="https://placeimg.com/200/150/any?id=97"
+                                                alt=""
+                                              />
+                                            </div>
+                                          </div>
+                                          <!--end of slide-->
+                                          <!--slide-->
+                                          <div
+                                            class="swiper-slide gctcetc-slider__slide gctcetcs-slide"
+                                          >
+                                            <div class="gctcetcs-slide__image">
+                                              <img
+                                                src="https://placeimg.com/200/150/any?id=14"
+                                                alt=""
+                                              />
+                                            </div>
+                                          </div>
+                                          <!--end of slide-->
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <!--end of content-->
+                                </div>
+                                <div class="content">
+                                  <!--content-->
+                                  <div
+                                    class="gctce-tabs__content gctcet-content"
+                                  >
+                                    <div
+                                      class="gctcet-content__slider gctcetc-slider"
+                                    >
+                                      <div
+                                        class="swiper gctcetc-slider__slider"
+                                      >
+                                        <div class="swiper-wrapper">
+                                          <!--slide-->
+                                          <div
+                                            class="swiper-slide gctcetc-slider__slide gctcetcs-slide"
+                                          >
+                                            <div class="gctcetcs-slide__image">
+                                              <img
+                                                src="https://placeimg.com/200/150/any?id=60"
+                                                alt=""
+                                              />
+                                            </div>
+                                          </div>
+                                          <!--end of slide-->
+                                          <!--slide-->
+                                          <div
+                                            class="swiper-slide gctcetc-slider__slide gctcetcs-slide"
+                                          >
+                                            <div class="gctcetcs-slide__image">
+                                              <img
+                                                src="https://placeimg.com/200/150/any?id=79"
+                                                alt=""
+                                              />
+                                            </div>
+                                          </div>
+                                          <!--end of slide-->
+                                          <!--slide-->
+                                          <div
+                                            class="swiper-slide gctcetc-slider__slide gctcetcs-slide"
+                                          >
+                                            <div class="gctcetcs-slide__image">
+                                              <img
+                                                src="https://placeimg.com/200/150/any?id=13"
+                                                alt=""
+                                              />
+                                            </div>
+                                          </div>
+                                          <!--end of slide-->
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <!--end of content-->
+                                </div>
+                                <div class="content">
+                                  <!--content-->
+                                  <div
+                                    class="gctce-tabs__content gctcet-content"
+                                  >
+                                    <div
+                                      class="gctcet-content__slider gctcetc-slider"
+                                    >
+                                      <div
+                                        class="swiper gctcetc-slider__slider"
+                                      >
+                                        <div class="swiper-wrapper">
+                                          <!--slide-->
+                                          <div
+                                            class="swiper-slide gctcetc-slider__slide gctcetcs-slide"
+                                          >
+                                            <div class="gctcetcs-slide__image">
+                                              <img
+                                                src="https://placeimg.com/200/150/any?id=73"
+                                                alt=""
+                                              />
+                                            </div>
+                                          </div>
+                                          <!--end of slide-->
+                                          <!--slide-->
+                                          <div
+                                            class="swiper-slide gctcetc-slider__slide gctcetcs-slide"
+                                          >
+                                            <div class="gctcetcs-slide__image">
+                                              <img
+                                                src="https://placeimg.com/200/150/any?id=41"
+                                                alt=""
+                                              />
+                                            </div>
+                                          </div>
+                                          <!--end of slide-->
+                                          <!--slide-->
+                                          <div
+                                            class="swiper-slide gctcetc-slider__slide gctcetcs-slide"
+                                          >
+                                            <div class="gctcetcs-slide__image">
+                                              <img
+                                                src="https://placeimg.com/200/150/any?id=10"
+                                                alt=""
+                                              />
+                                            </div>
+                                          </div>
+                                          <!--end of slide-->
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <!--end of content-->
+                                </div>
+                                <div class="content">
+                                  <!--content-->
+                                  <div
+                                    class="gctce-tabs__content gctcet-content"
+                                  >
+                                    <div
+                                      class="gctcet-content__slider gctcetc-slider"
+                                    >
+                                      <div
+                                        class="swiper gctcetc-slider__slider"
+                                      >
+                                        <div class="swiper-wrapper">
+                                          <!--slide-->
+                                          <div
+                                            class="swiper-slide gctcetc-slider__slide gctcetcs-slide"
+                                          >
+                                            <div class="gctcetcs-slide__image">
+                                              <img
+                                                src="https://placeimg.com/200/150/any?id=78"
+                                                alt=""
+                                              />
+                                            </div>
+                                          </div>
+                                          <!--end of slide-->
+                                          <!--slide-->
+                                          <div
+                                            class="swiper-slide gctcetc-slider__slide gctcetcs-slide"
+                                          >
+                                            <div class="gctcetcs-slide__image">
+                                              <img
+                                                src="https://placeimg.com/200/150/any?id=63"
+                                                alt=""
+                                              />
+                                            </div>
+                                          </div>
+                                          <!--end of slide-->
+                                          <!--slide-->
+                                          <div
+                                            class="swiper-slide gctcetc-slider__slide gctcetcs-slide"
+                                          >
+                                            <div class="gctcetcs-slide__image">
+                                              <img
+                                                src="https://placeimg.com/200/150/any?id=49"
+                                                alt=""
+                                              />
+                                            </div>
+                                          </div>
+                                          <!--end of slide-->
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <!--end of content-->
+                                </div>
+                                <div class="content">
+                                  <!--content-->
+                                  <div
+                                    class="gctce-tabs__content gctcet-content"
+                                  >
+                                    <div
+                                      class="gctcet-content__slider gctcetc-slider"
+                                    >
+                                      <div
+                                        class="swiper gctcetc-slider__slider"
+                                      >
+                                        <div class="swiper-wrapper">
+                                          <!--slide-->
+                                          <div
+                                            class="swiper-slide gctcetc-slider__slide gctcetcs-slide"
+                                          >
+                                            <div class="gctcetcs-slide__image">
+                                              <img
+                                                src="https://placeimg.com/200/150/any?id=71"
+                                                alt=""
+                                              />
+                                            </div>
+                                          </div>
+                                          <!--end of slide-->
+                                          <!--slide-->
+                                          <div
+                                            class="swiper-slide gctcetc-slider__slide gctcetcs-slide"
+                                          >
+                                            <div class="gctcetcs-slide__image">
+                                              <img
+                                                src="https://placeimg.com/200/150/any?id=26"
+                                                alt=""
+                                              />
+                                            </div>
+                                          </div>
+                                          <!--end of slide-->
+                                          <!--slide-->
+                                          <div
+                                            class="swiper-slide gctcetc-slider__slide gctcetcs-slide"
+                                          >
+                                            <div class="gctcetcs-slide__image">
+                                              <img
+                                                src="https://placeimg.com/200/150/any?id=48"
+                                                alt=""
+                                              />
+                                            </div>
+                                          </div>
+                                          <!--end of slide-->
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <!--end of content-->
+                                </div>
+                                <div class="content">
+                                  <!--content-->
+                                  <div
+                                    class="gctce-tabs__content gctcet-content"
+                                  >
+                                    <div
+                                      class="gctcet-content__slider gctcetc-slider"
+                                    >
+                                      <div
+                                        class="swiper gctcetc-slider__slider"
+                                      >
+                                        <div class="swiper-wrapper">
+                                          <!--slide-->
+                                          <div
+                                            class="swiper-slide gctcetc-slider__slide gctcetcs-slide"
+                                          >
+                                            <div class="gctcetcs-slide__image">
+                                              <img
+                                                src="https://placeimg.com/200/150/any?id=61"
+                                                alt=""
+                                              />
+                                            </div>
+                                          </div>
+                                          <!--end of slide-->
+                                          <!--slide-->
+                                          <div
+                                            class="swiper-slide gctcetc-slider__slide gctcetcs-slide"
+                                          >
+                                            <div class="gctcetcs-slide__image">
+                                              <img
+                                                src="https://placeimg.com/200/150/any?id=42"
+                                                alt=""
+                                              />
+                                            </div>
+                                          </div>
+                                          <!--end of slide-->
+                                          <!--slide-->
+                                          <div
+                                            class="swiper-slide gctcetc-slider__slide gctcetcs-slide"
+                                          >
+                                            <div class="gctcetcs-slide__image">
+                                              <img
+                                                src="https://placeimg.com/200/150/any?id=25"
+                                                alt=""
+                                              />
+                                            </div>
+                                          </div>
+                                          <!--end of slide-->
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <!--end of content-->
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="gctc-example__bju gctce-bju">
+                            <div class="gctce-bju__title">КБЖУ</div>
+                            <div class="gctce-bju__cal">2000</div>
+                            <div class="gctce-bju__b">99</div>
+                            <div class="gctce-bju__j">88</div>
+                            <div class="gctce-bju__u">187</div>
+                          </div>
+                        </div>
+                      </div>
+                      <!--end of content-->
+                    </div>
+                    <div class="content">
+                      <!--content-->
+                      <div class="gc-tabs__content gct-content">
+                        <div class="gct-content__title">
+                          Палитра блюд различных стран мира
+                        </div>
+                        <div class="gct-content__count gctc-count">
+                          <div class="gctc-count__item selected">3 блюда</div>
+                          <div class="gctc-count__item">4 блюда</div>
+                          <div class="gctc-count__item">5 блюд</div>
+                          <div class="gctc-count__item">6 блюд</div>
+                        </div>
+                        <div class="gct-content__add gctc-add">
+                          <div class="gctc-add__item">
+                            Добавить десерт (100 р/день)
+                          </div>
+                          <div class="gctc-add__item">
+                            Добавить напиток (50 р/день)
+                          </div>
+                        </div>
+                        <div class="gct-content__example gctc-example">
+                          <div class="gctc-example__title">
+                            Пример меню на день
+                          </div>
+                          <div class="gctc-example__tabs gctce-tabs">
+                            <div class="tabs gctce-tabs__tabs">
+                              <p class="tabs-day dayContainer">
+                                <span class="menuDay">Понедельник</span>
+                              </p>
+                              <div class="tabs-headings innerTabsHeadings">
+                                <div class="heading selected">Понедельник</div>
+                                <div class="heading">Вторник</div>
+                                <div class="heading">Среда</div>
+                                <div class="heading">Четверг</div>
+                                <div class="heading">Пятница</div>
+                                <div class="heading">Суббота</div>
+                                <div class="heading">Воскресенье</div>
+                              </div>
+                              <div class="tabs-content">
+                                <div class="content show">
+                                  <!--content-->
+                                  <div
+                                    class="gctce-tabs__content gctcet-content"
+                                  >
+                                    <div
+                                      class="gctcet-content__slider gctcetc-slider"
+                                    >
+                                      <div
+                                        class="swiper gctcetc-slider__slider"
+                                      >
+                                        <div class="swiper-wrapper">
+                                          <!--slide-->
+                                          <div
+                                            class="swiper-slide gctcetc-slider__slide gctcetcs-slide"
+                                          >
+                                            <div class="gctcetcs-slide__image">
+                                              <img
+                                                src="https://placeimg.com/200/150/any?id=43"
+                                                alt=""
+                                              />
+                                            </div>
+                                          </div>
+                                          <!--end of slide-->
+                                          <!--slide-->
+                                          <div
+                                            class="swiper-slide gctcetc-slider__slide gctcetcs-slide"
+                                          >
+                                            <div class="gctcetcs-slide__image">
+                                              <img
+                                                src="https://placeimg.com/200/150/any?id=35"
+                                                alt=""
+                                              />
+                                            </div>
+                                          </div>
+                                          <!--end of slide-->
+                                          <!--slide-->
+                                          <div
+                                            class="swiper-slide gctcetc-slider__slide gctcetcs-slide"
+                                          >
+                                            <div class="gctcetcs-slide__image">
+                                              <img
+                                                src="https://placeimg.com/200/150/any?id=80"
+                                                alt=""
+                                              />
+                                            </div>
+                                          </div>
+                                          <!--end of slide-->
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <!--end of content-->
+                                </div>
+                                <div class="content">
+                                  <!--content-->
+                                  <div
+                                    class="gctce-tabs__content gctcet-content"
+                                  >
+                                    <div
+                                      class="gctcet-content__slider gctcetc-slider"
+                                    >
+                                      <div
+                                        class="swiper gctcetc-slider__slider"
+                                      >
+                                        <div class="swiper-wrapper">
+                                          <!--slide-->
+                                          <div
+                                            class="swiper-slide gctcetc-slider__slide gctcetcs-slide"
+                                          >
+                                            <div class="gctcetcs-slide__image">
+                                              <img
+                                                src="https://placeimg.com/200/150/any?id=69"
+                                                alt=""
+                                              />
+                                            </div>
+                                          </div>
+                                          <!--end of slide-->
+                                          <!--slide-->
+                                          <div
+                                            class="swiper-slide gctcetc-slider__slide gctcetcs-slide"
+                                          >
+                                            <div class="gctcetcs-slide__image">
+                                              <img
+                                                src="https://placeimg.com/200/150/any?id=36"
+                                                alt=""
+                                              />
+                                            </div>
+                                          </div>
+                                          <!--end of slide-->
+                                          <!--slide-->
+                                          <div
+                                            class="swiper-slide gctcetc-slider__slide gctcetcs-slide"
+                                          >
+                                            <div class="gctcetcs-slide__image">
+                                              <img
+                                                src="https://placeimg.com/200/150/any?id=22"
+                                                alt=""
+                                              />
+                                            </div>
+                                          </div>
+                                          <!--end of slide-->
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <!--end of content-->
+                                </div>
+                                <div class="content">
+                                  <!--content-->
+                                  <div
+                                    class="gctce-tabs__content gctcet-content"
+                                  >
+                                    <div
+                                      class="gctcet-content__slider gctcetc-slider"
+                                    >
+                                      <div
+                                        class="swiper gctcetc-slider__slider"
+                                      >
+                                        <div class="swiper-wrapper">
+                                          <!--slide-->
+                                          <div
+                                            class="swiper-slide gctcetc-slider__slide gctcetcs-slide"
+                                          >
+                                            <div class="gctcetcs-slide__image">
+                                              <img
+                                                src="https://placeimg.com/200/150/any?id=54"
+                                                alt=""
+                                              />
+                                            </div>
+                                          </div>
+                                          <!--end of slide-->
+                                          <!--slide-->
+                                          <div
+                                            class="swiper-slide gctcetc-slider__slide gctcetcs-slide"
+                                          >
+                                            <div class="gctcetcs-slide__image">
+                                              <img
+                                                src="https://placeimg.com/200/150/any?id=22"
+                                                alt=""
+                                              />
+                                            </div>
+                                          </div>
+                                          <!--end of slide-->
+                                          <!--slide-->
+                                          <div
+                                            class="swiper-slide gctcetc-slider__slide gctcetcs-slide"
+                                          >
+                                            <div class="gctcetcs-slide__image">
+                                              <img
+                                                src="https://placeimg.com/200/150/any?id=98"
+                                                alt=""
+                                              />
+                                            </div>
+                                          </div>
+                                          <!--end of slide-->
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <!--end of content-->
+                                </div>
+                                <div class="content">
+                                  <!--content-->
+                                  <div
+                                    class="gctce-tabs__content gctcet-content"
+                                  >
+                                    <div
+                                      class="gctcet-content__slider gctcetc-slider"
+                                    >
+                                      <div
+                                        class="swiper gctcetc-slider__slider"
+                                      >
+                                        <div class="swiper-wrapper">
+                                          <!--slide-->
+                                          <div
+                                            class="swiper-slide gctcetc-slider__slide gctcetcs-slide"
+                                          >
+                                            <div class="gctcetcs-slide__image">
+                                              <img
+                                                src="https://placeimg.com/200/150/any?id=75"
+                                                alt=""
+                                              />
+                                            </div>
+                                          </div>
+                                          <!--end of slide-->
+                                          <!--slide-->
+                                          <div
+                                            class="swiper-slide gctcetc-slider__slide gctcetcs-slide"
+                                          >
+                                            <div class="gctcetcs-slide__image">
+                                              <img
+                                                src="https://placeimg.com/200/150/any?id=77"
+                                                alt=""
+                                              />
+                                            </div>
+                                          </div>
+                                          <!--end of slide-->
+                                          <!--slide-->
+                                          <div
+                                            class="swiper-slide gctcetc-slider__slide gctcetcs-slide"
+                                          >
+                                            <div class="gctcetcs-slide__image">
+                                              <img
+                                                src="https://placeimg.com/200/150/any?id=77"
+                                                alt=""
+                                              />
+                                            </div>
+                                          </div>
+                                          <!--end of slide-->
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <!--end of content-->
+                                </div>
+                                <div class="content">
+                                  <!--content-->
+                                  <div
+                                    class="gctce-tabs__content gctcet-content"
+                                  >
+                                    <div
+                                      class="gctcet-content__slider gctcetc-slider"
+                                    >
+                                      <div
+                                        class="swiper gctcetc-slider__slider"
+                                      >
+                                        <div class="swiper-wrapper">
+                                          <!--slide-->
+                                          <div
+                                            class="swiper-slide gctcetc-slider__slide gctcetcs-slide"
+                                          >
+                                            <div class="gctcetcs-slide__image">
+                                              <img
+                                                src="https://placeimg.com/200/150/any?id=2"
+                                                alt=""
+                                              />
+                                            </div>
+                                          </div>
+                                          <!--end of slide-->
+                                          <!--slide-->
+                                          <div
+                                            class="swiper-slide gctcetc-slider__slide gctcetcs-slide"
+                                          >
+                                            <div class="gctcetcs-slide__image">
+                                              <img
+                                                src="https://placeimg.com/200/150/any?id=26"
+                                                alt=""
+                                              />
+                                            </div>
+                                          </div>
+                                          <!--end of slide-->
+                                          <!--slide-->
+                                          <div
+                                            class="swiper-slide gctcetc-slider__slide gctcetcs-slide"
+                                          >
+                                            <div class="gctcetcs-slide__image">
+                                              <img
+                                                src="https://placeimg.com/200/150/any?id=58"
+                                                alt=""
+                                              />
+                                            </div>
+                                          </div>
+                                          <!--end of slide-->
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <!--end of content-->
+                                </div>
+                                <div class="content">
+                                  <!--content-->
+                                  <div
+                                    class="gctce-tabs__content gctcet-content"
+                                  >
+                                    <div
+                                      class="gctcet-content__slider gctcetc-slider"
+                                    >
+                                      <div
+                                        class="swiper gctcetc-slider__slider"
+                                      >
+                                        <div class="swiper-wrapper">
+                                          <!--slide-->
+                                          <div
+                                            class="swiper-slide gctcetc-slider__slide gctcetcs-slide"
+                                          >
+                                            <div class="gctcetcs-slide__image">
+                                              <img
+                                                src="https://placeimg.com/200/150/any?id=25"
+                                                alt=""
+                                              />
+                                            </div>
+                                          </div>
+                                          <!--end of slide-->
+                                          <!--slide-->
+                                          <div
+                                            class="swiper-slide gctcetc-slider__slide gctcetcs-slide"
+                                          >
+                                            <div class="gctcetcs-slide__image">
+                                              <img
+                                                src="https://placeimg.com/200/150/any?id=16"
+                                                alt=""
+                                              />
+                                            </div>
+                                          </div>
+                                          <!--end of slide-->
+                                          <!--slide-->
+                                          <div
+                                            class="swiper-slide gctcetc-slider__slide gctcetcs-slide"
+                                          >
+                                            <div class="gctcetcs-slide__image">
+                                              <img
+                                                src="https://placeimg.com/200/150/any?id=61"
+                                                alt=""
+                                              />
+                                            </div>
+                                          </div>
+                                          <!--end of slide-->
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <!--end of content-->
+                                </div>
+                                <div class="content">
+                                  <!--content-->
+                                  <div
+                                    class="gctce-tabs__content gctcet-content"
+                                  >
+                                    <div
+                                      class="gctcet-content__slider gctcetc-slider"
+                                    >
+                                      <div
+                                        class="swiper gctcetc-slider__slider"
+                                      >
+                                        <div class="swiper-wrapper">
+                                          <!--slide-->
+                                          <div
+                                            class="swiper-slide gctcetc-slider__slide gctcetcs-slide"
+                                          >
+                                            <div class="gctcetcs-slide__image">
+                                              <img
+                                                src="https://placeimg.com/200/150/any?id=76"
+                                                alt=""
+                                              />
+                                            </div>
+                                          </div>
+                                          <!--end of slide-->
+                                          <!--slide-->
+                                          <div
+                                            class="swiper-slide gctcetc-slider__slide gctcetcs-slide"
+                                          >
+                                            <div class="gctcetcs-slide__image">
+                                              <img
+                                                src="https://placeimg.com/200/150/any?id=62"
+                                                alt=""
+                                              />
+                                            </div>
+                                          </div>
+                                          <!--end of slide-->
+                                          <!--slide-->
+                                          <div
+                                            class="swiper-slide gctcetc-slider__slide gctcetcs-slide"
+                                          >
+                                            <div class="gctcetcs-slide__image">
+                                              <img
+                                                src="https://placeimg.com/200/150/any?id=77"
+                                                alt=""
+                                              />
+                                            </div>
+                                          </div>
+                                          <!--end of slide-->
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <!--end of content-->
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="gctc-example__bju gctce-bju">
+                            <div class="gctce-bju__title">КБЖУ</div>
+                            <div class="gctce-bju__cal">2000</div>
+                            <div class="gctce-bju__b">99</div>
+                            <div class="gctce-bju__j">88</div>
+                            <div class="gctce-bju__u">187</div>
+                          </div>
+                        </div>
+                      </div>
+                      <!--end of content-->
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <form class="goal-calc__price gc-price">
+                <div class="gc-price__try">
+                  Попробуйте за <span>1440р</span>
+                </div>
+                <div class="gc-price__item gcp-item">
+                  <div class="gcp-item__title">Когда будете есть</div>
+                  <label>
+                    <input
+                      type="radio"
+                      name="gcp-item__checkbox-1"
+                      value="5"
+                      checked
+                    /><span class="gcp-item__check gcp-item__check-min"
+                      >Каждый день</span
+                    >
+                  </label>
+                  <label>
+                    <input
+                      type="radio"
+                      name="gcp-item__checkbox-1"
+                      value="20"
+                    /><span class="gcp-item__check gcp-item__check-max"
+                      >По будням</span
+                    >
+                  </label>
+                </div>
+                <div class="gc-price__item gcp-item">
+                  <div class="gcp-item__title">Количество дней</div>
+                  <label>
+                    <input
+                      type="radio"
+                      name="gcp-item__checkbox-2"
+                      value="5"
+                      checked
+                    /><span class="gcp-item__check gcp-item__check-min"
+                      >5(760 р/день)</span
+                    >
+                  </label>
+                  <label>
+                    <input
+                      type="radio"
+                      name="gcp-item__checkbox-2"
+                      value="20"
+                    /><span class="gcp-item__check gcp-item__check-max"
+                      >20(700 р/день)</span
+                    >
+                  </label>
+                </div>
+                <div class="gc-price__promo">
+                  <input type="text" placeholder="Введите промокод" />
+                </div>
+                <div class="gc-price__ration-container">
+                  <div class="gc-price__ration gcp-ration">
+                    <div class="gcp-ration__name">Рацион "Домашний":</div>
+                    <div class="gcp-ration__count">5 блюд,</div>
+                    <div class="gcp-ration__days">5 дней</div>
+                    <div class="gcp-ration__delete">&#9747;</div>
+                  </div>
+                </div>
+                <div class="gc-price__add" id="addRation">Добавить рацион</div>
+                <div class="gc-price__total">Итого:<span>3800 р.</span></div>
+                <div class="gc-price__payment">
+                  <label>
+                    <input
+                      type="radio"
+                      name="gc-price__payment-radio"
+                      checked
+                    /><span>Оплата курьеру</span>
+                  </label>
+                  <label>
+                    <input type="radio" name="gc-price__payment-radio" /><span
+                      >Оплата онлайн</span
+                    >
+                  </label>
+                </div>
+                <div class="gc-price__phone">
+                  <input
+                    type="text"
+                    placeholder="Введите номер"
+                    autocomplete="off"
+                    id="phoneForMask"
+                  />
+                </div>
+                <div class="gc-price__order-wrapper">
+                  <button class="gc-price__order" disabled id="orderBtn">
+                    Заказать
+                  </button>
+                  <div class="gc-price__policy">
+                    Оформляя заказ вы соглашаетесь с
+                    <a href="#">политикой конфеденциальности</a>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </section>
+        <section class="bonuses">
+          <div class="container">
+            <div class="section-title" data-aos="fade-right">Наши бонусы</div>
+            <div class="bonuses__items bonuses-items">
+              <!--item-->
+              <div class="bonuses-items__bonus bi-bonus">
+                <div class="bi-bonus__icon">
+                  <svg>
+                    <use
+                      xlink:href="./img/bonuses/items/icon01.svg#friends"
+                    ></use>
+                  </svg>
+                </div>
+                <div class="bi-bonus__title">Приведи друга</div>
+                <div class="bi-bonus__text">
+                  ...И получайте до 500р. скидка на заказ
+                </div>
+              </div>
+              <!--end of item-->
+              <!--item-->
+              <div class="bonuses-items__bonus bi-bonus">
+                <div class="bi-bonus__icon">
+                  <svg>
+                    <use
+                      xlink:href="./img/bonuses/items/icon02.svg#snowflake"
+                    ></use>
+                  </svg>
+                </div>
+                <div class="bi-bonus__title">Заморозка подписки</div>
+                <div class="bi-bonus__text">
+                  Поставь доставку на паузу, когда угодно, на сколько нужно
+                </div>
+              </div>
+              <!--end of item-->
+              <!--item-->
+              <div class="bonuses-items__bonus bi-bonus">
+                <div class="bi-bonus__icon">
+                  <svg>
+                    <use xlink:href="./img/bonuses/items/icon03.svg#free"></use>
+                  </svg>
+                </div>
+                <div class="bi-bonus__title">Бесплатная доставка</div>
+                <div class="bi-bonus__text">При заказе на любую сумму</div>
+              </div>
+              <!--end of item-->
+            </div>
+          </div>
+        </section>
+        <section class="decision">
+          <div class="container decision-container">
+            <div class="section-title" data-aos="fade-right">
+              Не можешь определиться?
+            </div>
+            <div class="decision__order">
+              Попробуй <span>10</span> наших блюд всего за <span>1440 ₽</span>
+            </div>
+            <div class="primary-btn decision__btn">Заказать</div>
+          </div>
+        </section>
+        <section class="care">
+          <div class="container care-container">
+            <div class="section-title" data-aos="fade-right">
+              Забота о планете — долг каждого!
+            </div>
+            <div class="care__img care__img-01">
+              <img src="./img/care/01.webp" alt="" />
+            </div>
+            <div class="care__img care__img-02">
+              <img src="./img/care/02.webp" alt="" />
+            </div>
+            <div class="care__img care__img-03">
+              <img src="./img/care/03.webp" alt="" />
+            </div>
+            <div class="care__text">
+              Сегодня, выбрасывая в мусорное ведро нашу упаковку, вы решаете,
+              каким воздухом будут дышать ваши дети. Совсем отказаться от
+              пластика мы не можем, как бы этого ни хотели: еда должна быть
+              загерметизирована, чтобы вы получили ее свежей.
+            </div>
+            <div class="care__solution care-solution">
+              <div class="care-solution__title">Но решение найдено.</div>
+              <div class="care-solution__items cs-items">
+                <!--item-->
+                <div class="cs-items__el csi-el">
+                  <div class="csi-el__icon">
+                    <svg>
+                      <use xlink:href="./img/care/items/icon01.svg#num1"></use>
+                    </svg>
+                  </div>
+                  <div class="csi-el__text">
+                    Получите пакет для сбора мусора вместе с набором блюд
+                  </div>
+                </div>
+                <!--end of item-->
+                <!--item-->
+                <div class="cs-items__el csi-el">
+                  <div class="csi-el__icon">
+                    <svg>
+                      <use xlink:href="./img/care/items/icon02.svg#num2"></use>
+                    </svg>
+                  </div>
+                  <div class="csi-el__text">
+                    Вымойте пластиковую посуду и сложите в пакет
+                  </div>
+                </div>
+                <!--end of item-->
+                <!--item-->
+                <div class="cs-items__el csi-el">
+                  <div class="csi-el__icon">
+                    <svg>
+                      <use xlink:href="./img/care/items/icon03.svg#num3"></use>
+                    </svg>
+                  </div>
+                  <div class="csi-el__text">
+                    Передайте пакет нашему курьеру при следующей доставке
+                  </div>
+                </div>
+                <!--end of item-->
+                <!--item-->
+                <div class="cs-items__el csi-el">
+                  <div class="csi-el__icon">
+                    <svg>
+                      <use xlink:href="./img/care/items/icon04.svg#num4"></use>
+                    </svg>
+                  </div>
+                  <div class="csi-el__text">
+                    Курьер отправит всю упаковку на переработку
+                  </div>
+                </div>
+                <!--end of item-->
+              </div>
+            </div>
+            <div class="care__responsibility">
+              Мы берем ответственность за сохранность планеты. Вы с нами?
+            </div>
+          </div>
+        </section>
+        <section class="how-it-works">
+          <div class="container">
+            <div class="section-title" data-aos="fade-right">
+              Как это работает
+            </div>
+            <div class="how-it-works__items hiw-items">
+              <!--item-->
+              <div class="hiw-items__el hiwi-el">
+                <div class="hiwi-el__icon">
+                  <svg>
+                    <use
+                      xlink:href="./img/how-it-works/items/icon01.svg#num01"
+                    ></use>
+                  </svg>
+                </div>
+                <div class="hiwi-el__title">Выбираете меню</div>
+                <div class="hiwi-el__text">
+                  На выбор Домашнее, Легкое или Авангард
+                </div>
+              </div>
+              <!--end of item-->
+              <div class="hiw-items__line"></div>
+              <!--item-->
+              <div class="hiw-items__el hiwi-el">
+                <div class="hiwi-el__icon">
+                  <svg>
+                    <use
+                      xlink:href="./img/how-it-works/items/icon02.svg#num02"
+                    ></use>
+                  </svg>
+                </div>
+                <div class="hiwi-el__title">Выбираете рацион</div>
+                <div class="hiwi-el__text">
+                  На выбор 4 варианта: 5, 7, 20, 28 дней
+                </div>
+              </div>
+              <!--end of item-->
+              <div class="hiw-items__line"></div>
+              <!--item-->
+              <div class="hiw-items__el hiwi-el">
+                <div class="hiwi-el__icon">
+                  <svg>
+                    <use
+                      xlink:href="./img/how-it-works/items/icon03.svg#num03"
+                    ></use>
+                  </svg>
+                </div>
+                <div class="hiwi-el__title">Согласовываете доставку</div>
+                <div class="hiwi-el__text">
+                  Доставляем с утра и вечером в удобный 2-х часовой интервал
+                </div>
+              </div>
+              <!--end of item-->
+              <div class="hiw-items__line"></div>
+              <!--item-->
+              <div class="hiw-items__el hiwi-el">
+                <div class="hiwi-el__icon">
+                  <svg>
+                    <use
+                      xlink:href="./img/how-it-works/items/icon04.svg#num04"
+                    ></use>
+                  </svg>
+                </div>
+                <div class="hiwi-el__title">Забываете о готовке!</div>
+                <div class="hiwi-el__text">
+                  С нашими блюдами вам больше не придется готовить еду
+                </div>
+              </div>
+              <!--end of item-->
+            </div>
+          </div>
+        </section>
+        <section class="about">
+          <div class="container about-container">
+            <div class="about__info about-info">
+              <div
+                class="section-title about-info__title"
+                data-aos="fade-right"
+              >
+                О компании
+              </div>
+              <div class="about-info__desc">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Praesentium quis assumenda dolores ab veniam voluptatum
+                voluptatibus, placeat animi ex accusantium?
+              </div>
+              <div class="about-info__achievements">
+                Мы работаем с 2019 года и за это время доставили уже более
+                <span>1 000 000</span> блюд.
+              </div>
+            </div>
+            <div class="about__pic about-pic">
+              <div class="about-pic__image">
+                <img src="./img/about/founder.jpg" alt="Основатель компании" />
+              </div>
+              <div class="about-pic__desc">
+                Все начиналось с простой идеи удобной доставки домашней еды,
+                которая быстро превратилась в полноценный бизнес.
+              </div>
+              <div class="about-pic__name">Основатель компании Lorem Ipsun</div>
+            </div>
+          </div>
+        </section>
+        <section class="reviews">
+          <div class="container">
+            <div id="vk_wrapper">
+              <div id="vk_groups"></div>
+            </div>
+          </div>
+        </section>
+        <section class="delivery">
+          <div class="container delivery-container">
+            <div class="section-title" data-aos="fade-right">
+              Бесплатная доставка
+            </div>
+            <div class="delivery__map" id="map"></div>
+            <div class="delivery__time delivery-time">
+              <!--item-->
+              <div class="delivery-time__item dt-item">
+                <div class="dt-item__title">Утренняя доставка</div>
+                <div class="dt-item__time">7:00 - 12:00</div>
+              </div>
+              <!--end of item-->
+              <!--item-->
+              <div class="delivery-time__item dt-item">
+                <div class="dt-item__title">Вечерняя доставка</div>
+                <div class="dt-item__time">18:00 - 23:00</div>
+              </div>
+              <!--end of item-->
+            </div>
+          </div>
+        </section>
+        <section class="faq">
+          <div class="container">
+            <div class="section-title" data-aos="fade-right">
+              Отвечаем на частые вопросы
+            </div>
+            <ul class="accordeon__list single faq__accordeon">
+              <!--item-->
+              <li class="accordeon">
+                <button class="accordeon__control" aria-expanded="false">
+                  <span class="accordeon__title"
+                    >Как работает подписка на рацион?</span
+                  ><span class="accordeon__icon"></span>
+                </button>
+                <div class="accordeon__content" aria-hidden="true">
+                  Все просто и очень удобно) Вы выбираете удобный для вас
+                  вариант рациона на 5, 7, 20 или 28 дней. И каждые 2-3 дня наш
+                  курьер будет привозить вам свежую еду в удобное время. Вам
+                  больше не нужно думать о готовке, походах в магазин и мытье
+                  посуды, гораздо лучше тратить время на более полезные вещи.
+                </div>
+              </li>
+              <!--end of item-->
+              <!--item-->
+              <li class="accordeon">
+                <button class="accordeon__control" aria-expanded="false">
+                  <span class="accordeon__title"
+                    >Можно ли заказать не весь рацион, а что-то
+                    определенное?</span
+                  ><span class="accordeon__icon"></span>
+                </button>
+                <div class="accordeon__content" aria-hidden="true">
+                  Мы доставляем рационы на весь день, поэтому нет возможности
+                  заказать отдельно завтрак, обед или ужин.
+                </div>
+              </li>
+              <!--end of item-->
+              <!--item-->
+              <li class="accordeon">
+                <button class="accordeon__control" aria-expanded="false">
+                  <span class="accordeon__title"
+                    >Можно ли менять меню по составу и калорийности?</span
+                  ><span class="accordeon__icon"></span>
+                </button>
+                <div class="accordeon__content" aria-hidden="true">
+                  По предварительному согласованию можем заменять отдельные
+                  блюда, если вы не едите определенные продукты или у вас
+                  пищевая аллергия. Также мы можем изменить отдельные
+                  высококалорийные блюда на фрукты или овощи, чтобы вы смогли
+                  снизить число калорий. Свяжитесь с нами любым удобным способом
+                  :)
+                </div>
+              </li>
+              <!--end of item-->
+              <!--item-->
+              <li class="accordeon">
+                <button class="accordeon__control" aria-expanded="false">
+                  <span class="accordeon__title"
+                    >Есть ли у вас специальное меню для диабетиков или
+                    вегетарианское?</span
+                  ><span class="accordeon__icon"></span>
+                </button>
+                <div class="accordeon__content" aria-hidden="true">
+                  Наши рационы рассчитаны на массовую аудиторию. На людей,
+                  которые хотят отказаться от необходимости ходить по магазинам,
+                  готовить и мыть посуду, но при этом питаться вкусно,
+                  разнообразно и по-домашнему. В ближайшее время мы сможем
+                  предложить вам специальное меню, следите за новостями в
+                  социальных сетях и на сайте.
+                </div>
+              </li>
+              <!--end of item-->
+              <!--item-->
+              <li class="accordeon">
+                <button class="accordeon__control" aria-expanded="false">
+                  <span class="accordeon__title"
+                    >У вас указано время доставки с 7:00 до 12:00 и с 18:00 до
+                    23:00. Мне придется 5 часов сидеть дома?</span
+                  ><span class="accordeon__icon"></span>
+                </button>
+                <div class="accordeon__content" aria-hidden="true">
+                  Нет, вы можете выбрать 2-х часовой интервал. Сообщите об этом
+                  оператору в день доставки, когда он позвонит вам для
+                  согласования времени.
+                </div>
+              </li>
+              <!--end of item-->
+              <!--item-->
+              <li class="accordeon">
+                <button class="accordeon__control" aria-expanded="false">
+                  <span class="accordeon__title"
+                    >Если я не могу принять доставку, можно ли заморозить или
+                    перенести ее на другой день?</span
+                  ><span class="accordeon__icon"></span>
+                </button>
+                <div class="accordeon__content" aria-hidden="true">
+                  Да, конечно! Предупредите нас об этом за день и мы остановим
+                  доставку для вас или перенесем на другую дату. Вы получите в
+                  полном объеме все плаченные дни.
+                </div>
+              </li>
+              <!--end of item-->
+              <!--item-->
+              <li class="accordeon">
+                <button class="accordeon__control" aria-expanded="false">
+                  <span class="accordeon__title"
+                    >Есть ли у вас дневная доставка?</span
+                  ><span class="accordeon__icon"></span>
+                </button>
+                <div class="accordeon__content" aria-hidden="true">
+                  В данный момент у нас нет дневной доставки и мы над этим
+                  работаем, сейчас мы предлагаем утреннюю и вечернюю доставку.
+                </div>
+              </li>
+              <!--end of item-->
+              <!--item-->
+              <li class="accordeon">
+                <button class="accordeon__control" aria-expanded="false">
+                  <span class="accordeon__title"
+                    >Вы доставляете в пригород?</span
+                  ><span class="accordeon__icon"></span>
+                </button>
+                <div class="accordeon__content" aria-hidden="true">
+                  Как правило, мы доставляем только в пределах СПб. Также мы
+                  доставляем в Мурино и Кудрово. Пожалуйста, уточните у
+                  оператора возможность доставки заказа по вашему адресу.
+                  Доставки в ЛО у нас нет.
+                </div>
+              </li>
+              <!--end of item-->
+            </ul>
+          </div>
+        </section>
+        <section class="additional-questions">
+          <div class="container">
+            <div class="section-title" data-aos="fade-right">
+              Остались вопросы?
+            </div>
+            <div class="additional-questions__content aq-content">
+              <div class="aq-content__text">
+                Звоните <span>407-30-47, напишите</span> нам или закажите
+              </div>
+              <div class="primary-btn aq-content__btn" id="callbackModalOpen">
+                Обратный звонок
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+      <footer class="footer">
+        <div class="container footer-container">
+          <div class="footer__info footer-info">
+            <div class="footer-info__logo">
+              <img src="./img/header/logo.png" alt="" />
+            </div>
+            <div class="footer-info__copy">&copy; 2022 все права защищены</div>
+            <div class="footer-info__links">
+              <a href="#">Оферта </a
+              ><a href="#">Политика конфеденциальности </a>
+            </div>
+          </div>
+          <div class="footer__contacts footer-column">
+            <div class="footer-column__title">Контакты</div>
+            <span>Юридический адрес</span>123123123, Lorem ipsum dolor sit amet
+            consectetur adipisicing elit. Maxime ex explicabo minima, rem
+            deserunt ab non nostrum mollitia.
+          </div>
+          <div class="footer__requisites footer-column">
+            <div class="footer-column__title">Реквезиты</div>
+            <p>ООО "ААА"</p>
+            <p>ИНН 345646456456</p>
+            <p>КПП 456456456456</p>
+            <p>ОГРН 57877567567</p>
+          </div>
+          <div class="footer__in-touch footer-column">
+            <div class="footer-column__title">МЫ НА СВЯЗИ</div>
+            <a href="tel:823492934923">+7(324)23423424</a
+            ><a href="maailto: asdasd@mail.ru">info@tra-ta-ta.ru</a
+            ><a href="https://vk.com/"
+              ><img src="./img/footer/vk-icon.svg" alt=""
+            /></a>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="./scripts.js"></script>
+  </body>
+</html>

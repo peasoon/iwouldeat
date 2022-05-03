@@ -1,0 +1,35 @@
+@import "./scss/_reset.scss";
+@import "./_fonts.scss";
+@import "./scss/_outerstyles.scss";
+@import "./scss/_variables.scss";
+@import "./scss/_global.scss";
+@import "./scss/_burger.scss";
+@import "./scss/_header.scss";
+@import "./scss/_home.scss";
+@import "./scss/_footer.scss";
+
+:root {
+	--day-hover-after: transparent;
+	--day-hover-before: transparent;
+	--tab-bg-1: #f5d5b5;
+	--tab-bg-2: #dce7c1;
+	--tab-bg-3: #d5d0dc;
+	--tab-text-1: #f08e49;
+	--tab-text-2: #bad084;
+	--tab-text-3: #9791a0;
+
+}
+
+html {
+  font-size: 10px;
+
+  @media (max-width: 400px) {
+    font-size: 8px;
+  }
+}
+
+body {
+  font-family: $Rubik;
+  font-size: 1.8rem;
+  color: $text;
+}
