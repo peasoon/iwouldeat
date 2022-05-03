@@ -31,7 +31,6 @@ enquire.register("screen and (max-width:950px)", {
   match: function () {
     menuList.classList.add("menu-mobile");
     const menuListMobile = document.querySelector(".menu-mobile");
-    (menuListMobile);
     menuListMobile.style.top = header.offsetHeight + "px";
     menuListMobile.style.height = screen.height - header.offsetHeight + "px";
   },
@@ -305,7 +304,6 @@ innerSliders.forEach(slider => {
 				const dishesCount = index + 3;
 				const activeMainMenuElement = child.closest('.content')
 				const menuIndex = [...activeMainMenuElement.parentNode.children].indexOf(activeMainMenuElement)
-				(`${menuIndex} --- ${dishesCount}`)
 				setSlidesCount(menuIndex, dishesCount)
 				countBju(activeMainMenuElement)
 			})
@@ -373,7 +371,6 @@ innerSliders.forEach(slider => {
 //simplebar with
 {
 	const simpleBarRation = new SimpleBar(document.querySelector('.gc-price__ration-container'), {autoHide: false});
-	(document.querySelector('.gc-price__ration-container .simplebar-content'))
 }
 
 //imask 
@@ -386,7 +383,6 @@ innerSliders.forEach(slider => {
 	const maskedPhone = IMask(phoneInput, maskOptions);
 	const orderBtn = document.querySelector('#orderBtn')
 	maskedPhone.on("accept", () => {
-		(maskedPhone.unmaskedValue)
 		if (maskedPhone.unmaskedValue.length === 11) {
 			orderBtn.disabled = false
 		} else {
@@ -415,7 +411,6 @@ innerSliders.forEach(slider => {
 		if (document.documentElement.clientWidth < 650) {
 			vk_height= 300;
 		}
-		(vk_width)
 		VK.Widgets.Group("vk_groups", {mode: 4, wide: 1, width: vk_width, height: vk_height, color1: "FFFFFF", color2: "000000", color3: "5181B8"}, 174033755);
 };
 window.addEventListener('load', VK_Widget_Init, false);
@@ -435,7 +430,6 @@ window.addEventListener('resize', VK_Widget_Init, false);
 				zoom: 11,
 				controls: [],
 			});
-			('map-->',map)
 			map.controls.add("zoomControl", {
 				position: { right: "40px", top: "5px" },
 			});
@@ -479,9 +473,7 @@ window.addEventListener('resize', VK_Widget_Init, false);
     // Добавляем многоугольник на карту.
     map.geoObjects.add(myGeoObject);
 		} catch (error) {
-			("Failed to load Yandex Maps", error);
 		}
-		('map-map')
 	})();
 
 }
@@ -547,7 +539,7 @@ window.addEventListener('resize', VK_Widget_Init, false);
 		{
 		scale: 1.2,
 		repeat: -1, 
-		duration: 0.9,
+		duration: 0.7,
 		yoyo: true,
 	}
 	)
